@@ -1,2 +1,4 @@
 test:
   script: egrep -w 'Hello|world' file1.txt file2.txt
+package:
+  script: cat file1.txt file2.txt | gzip > package.gz
