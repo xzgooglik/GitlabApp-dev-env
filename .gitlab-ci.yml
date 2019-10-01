@@ -4,4 +4,4 @@ package:
   script: cat file1.txt file2.txt | gzip > package.gz
   artifacts:
     paths:
-    - packaged.gz
+    - package.gz
