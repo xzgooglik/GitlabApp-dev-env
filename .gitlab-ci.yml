@@ -9,6 +9,7 @@ compile:
   artifacts:
     paths:
     - compiled.txt
+    expire_in: 20 minutes
     
 test:
   stage: test
