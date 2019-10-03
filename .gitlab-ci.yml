@@ -17,7 +17,7 @@ test:
 
 package:
   stage: package
-  script: cat file1.txt file2.txt | gzip > package.gz
+  script: cat compiled.txt | gzip > package.gz
   artifacts:
     paths:
     - package.gz
