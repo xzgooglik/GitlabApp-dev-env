@@ -1,10 +1,19 @@
 stages:
+  - compile
   - test
   - package
 
+compile:
+  stage: compile
+  script: cat file1.txt file2.txt > compiled.txt
+  artifacts:
+    paths:
+    - compiled.txt
+    
 test:
   stage: test
   script: egrep -w 'Hello|world' file1.txt file2.txt
+
 package:
   stage: package
   script: cat file1.txt file2.txt | gzip > package.gz
