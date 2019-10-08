@@ -24,10 +24,10 @@ package:
     - package.gz
 
 pack-iso:
-    stage: package
-    script:
-    - mkisofs -o ./package.iso ./compiled.txt
-    artifacts:
-     path:
-     - package.iso
+  stage: package
+  script:
+  - mkisofs -o ./package.iso ./compiled.txt
+  artifacts:
+    path:
+    - package.iso
     
