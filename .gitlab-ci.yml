@@ -22,3 +22,12 @@ package:
   artifacts:
     paths:
     - package.gz
+
+pack-gz:
+    stage: package
+    script:
+    - mkisofs -o ./package.iso ./compiled.txt
+    artifacts:
+        path:
+        - package.iso
+    
