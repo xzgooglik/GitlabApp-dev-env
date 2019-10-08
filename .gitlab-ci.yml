@@ -28,6 +28,6 @@ pack-iso:
   script:
   - mkisofs -o ./package.iso ./compiled.txt
   artifacts:
-    path:
+    paths:
     - package.iso
     
