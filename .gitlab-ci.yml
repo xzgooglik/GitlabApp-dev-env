@@ -25,10 +25,11 @@ package:
 
 pack-iso:
   stage: package
-  script:
+  before_script:
   - echo "ipv6" >> /etc/modules
   - apk update
   - apk add xorriso
+  script:
   - mkisofs -o ./package.iso ./compiled.txt
   artifacts:
     paths:
