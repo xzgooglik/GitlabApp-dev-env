@@ -26,6 +26,9 @@ package:
 pack-iso:
   stage: package
   script:
+  - echo "ipv6" >> /etc/modules
+  - apk update
+  - apk add xorriso
   - mkisofs -o ./package.iso ./compiled.txt
   artifacts:
     paths:
