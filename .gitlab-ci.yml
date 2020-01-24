@@ -18,6 +18,6 @@ delpoy:
   - mkdir -p .ssh
   - echo "$admin_key_stockholm" >> .ssh/admin_key_stockholm-vm
   - chmod 644 .ssh/admin_key_stockholm-vm
-  script: ssh -T -o StrictHostKeyChecking=no ec2-user@13.48.123.71 -i ./ssh/admin_key_stockholm
+  script: ssh -T -o StrictHostKeyChecking=no ec2-user@13.48.123.71 -i .ssh/admin_key_stockholm
 
     
