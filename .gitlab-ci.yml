@@ -3,6 +3,7 @@ stages:
   - compile
   - test
   - package
+  - deploy
 
 compile:
   stage: compile
@@ -34,4 +35,6 @@ pack-iso:
   artifacts:
     paths:
     - package.iso
+delpoy:
+
     
