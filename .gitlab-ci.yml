@@ -20,7 +20,7 @@ delpoy:
   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   - chmod 600 ~/.ssh/ssh_key
   script:
-  - scp /compiled.txt ec2-user@13.48.123.71:/files
+  - scp -i ~/.ssh/ssh_key /compiled.txt ec2-user@13.48.123.71:/files
   - ssh -T ec2-user@13.48.123.71 -i ~/.ssh/ssh_key "mkdir gitlab && cd gitlab && touch file.txt"
 
 
