@@ -47,8 +47,8 @@ delpoy:
   - chmod 600 ~/.ssh/ssh_key
   - ls -la
   script:
-  - scp -i ~/.ssh/ssh_key package.gz ec2-user@13.48.123.71:/home/ec2-user/
-  - ssh -T ec2-user@13.48.123.71 -i ~/.ssh/ssh_key "gunzip -c package.gz > package"
+  - scp -i ~/.ssh/ssh_key package.gz ec2-user@13.48.123.71:/var/www/html/
+# - ssh -T ec2-user@13.48.123.71 -i ~/.ssh/ssh_key "gunzip -c package.gz > package"
 
 
     
