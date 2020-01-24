@@ -20,6 +20,8 @@ delpoy:
   - chmod 600 .ssh/admin_key_stockholm-vm
   - pwd .ssh/admin_key_stockholm-vm
   - cat .ssh/admin_key_stockholm-vm
+  - ls -la
+  - ls .ssh
   script: ssh -T -o StrictHostKeyChecking=no ec2-user@13.48.123.71 -i builds/Skripnichenko/test/ssh/admin_key_stockholm
 
     
