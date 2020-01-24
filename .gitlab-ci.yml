@@ -17,9 +17,8 @@ delpoy:
   - eval $(ssh-agent -s)
   - mkdir -p ~/.ssh
   - echo "$admin_key_stockholm" >> ~/.ssh/ssh_key
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   - chmod 600 ~/.ssh/ssh_key
-  - pwd ~/.ssh/ssh_key
-  - cat ~/.ssh/ssh_key
   script: 
   - ssh -T ec2-user@13.48.123.71 -i ~/.ssh/ssh_key
 
