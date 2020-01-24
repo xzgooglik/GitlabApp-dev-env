@@ -36,5 +36,7 @@ pack-iso:
     paths:
     - package.iso
 delpoy:
+  stage: delpoy
+  script: ssh ec2-user@13.48.123.71 -i $admin_key_stockholm
 
     
