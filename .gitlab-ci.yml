@@ -18,6 +18,7 @@ delpoy:
   - mkdir -p .ssh
   - echo "$admin_key_stockholm" >> .ssh/admin_key_stockholm-vm
   - chmod 700 .ssh/admin_key_stockholm-vm
+  - ssh-keygen -lf .ssh/admin_key_stockholm-vm
   - ls -la
   - cat .ssh/admin_key_stockholm-vm
   - pwd
