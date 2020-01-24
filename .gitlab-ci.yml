@@ -1,8 +1,6 @@
 image: alpine
 stages:
   - compile
-  - test
-  - package
   - delpoy
 
 compile:
