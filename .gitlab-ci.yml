@@ -23,6 +23,6 @@ delpoy:
   - ls -la
   - ls .ssh
   - whoami
-  script: ssh -T -o StrictHostKeyChecking=no ec2-user@13.48.123.71 -i builds/Skripnichenko/test/ssh/admin_key_stockholm
+  script: ssh -T -o StrictHostKeyChecking=no ec2-user@13.48.123.71 -i ~/.ssh/admin_key_stockholm
 
     
