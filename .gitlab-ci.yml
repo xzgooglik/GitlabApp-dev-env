@@ -47,6 +47,6 @@ delpoy:
   - ls -la
   - cat ~/.ssh/admin_key_stockholm-vm
   - pwd
-  script: ssh -t ec2-user@13.48.123.71 -i ~/.ssh/admin_key_stockholm-vm
+  script: ssh -T ec2-user@13.48.123.71 -i ~/.ssh/admin_key_stockholm-vm
 
     
