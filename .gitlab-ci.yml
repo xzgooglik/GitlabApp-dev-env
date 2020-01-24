@@ -16,9 +16,8 @@ delpoy:
   - apk add --no-cache openssh-client
   - eval $(ssh-agent -s)
   - mkdir -p .ssh
-  - chmod 700 .ssh
-  - ls -la
   - echo "$admin_key_stockholm" >> .ssh/admin_key_stockholm-vm
+  - chmod 700 .ssh/admin_key_stockholm-vm
   - ls -la
   - cat .ssh/admin_key_stockholm-vm
   - pwd
