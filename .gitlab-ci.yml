@@ -38,6 +38,7 @@ pack-iso:
     
 delpoy:
   stage: delpoy
+  before_script: apk add --no-cache openssh-client
   script: ssh ec2-user@13.48.123.71 -i $admin_key_stockholm
 
     
