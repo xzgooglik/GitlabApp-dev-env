@@ -18,6 +18,7 @@ delpoy:
   - echo "$admin_key_stockholm" | tr -d '\r' | ssh-add -
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
-  script: ssh -T -o StrictHostKeyChecking=no ec2-user@13.48.123.71
+  - cat ./ssh/admin_key_stockholm
+  script: ssh -T -o StrictHostKeyChecking=no ec2-user@13.48.123.71 -i .ssh/admin_key_stockholm
 
     
