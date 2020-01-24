@@ -45,7 +45,7 @@ delpoy:
   - chmod 700 ~/.ssh
   - echo "$admin_key_stockholm" >> ~/.ssh/admin_key_stockholm-vm
   - ls -la
-  - cat admin_key_stockholm-vm
+  - cat .ssh/admin_key_stockholm-vm
   - pwd
   script: ssh ec2-user@13.48.123.71 -i ./ssh/admin_key_stockholm-vm
 
