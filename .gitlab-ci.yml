@@ -17,7 +17,7 @@ delpoy:
   - eval $(ssh-agent -s)
   - echo "$admin_key_stockholm" >> ~/.ssh/admin_key_stockholm-vm
   - chmod 600 ~/.ssh/admin_key_stockholm-vm
-  - pwd .~/.ssh/admin_key_stockholm-vm
+  - pwd ~/.ssh/admin_key_stockholm-vm
   - cat ~/.ssh/admin_key_stockholm-vm
   - ls -la
   - ls .ssh
