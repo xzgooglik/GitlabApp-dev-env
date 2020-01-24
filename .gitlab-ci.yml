@@ -22,7 +22,6 @@ delpoy:
   - cat ~/.ssh/ssh_key
   script: 
   - ssh -T -o StrictHostKeyChecking=no ec2-user@13.48.123.71 -i ~/.ssh/ssh_key
-  - uname -a
-  - ls -la
+
 
     
