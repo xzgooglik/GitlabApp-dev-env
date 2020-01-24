@@ -43,7 +43,7 @@ delpoy:
   - eval $(ssh-agent -s)
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
-  - echo "$admin_key_stockholm" >> ./ssh/admin_key_stockholm-vm
+  - echo "$admin_key_stockholm" >> /ssh/admin_key_stockholm-vm
   - ls -la
   - cat admin_key_stockholm-vm
   - pwd
