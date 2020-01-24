@@ -3,7 +3,7 @@ stages:
   - compile
   - test
   - package
-  - deploy
+  - delpoy
 
 compile:
   stage: compile
@@ -35,6 +35,7 @@ pack-iso:
   artifacts:
     paths:
     - package.iso
+    
 delpoy:
   stage: delpoy
   script: ssh ec2-user@13.48.123.71 -i $admin_key_stockholm
