@@ -20,9 +20,8 @@ delpoy:
   - ls -la
   - echo "$admin_key_stockholm" >> .ssh/admin_key_stockholm-vm
   - ls -la
-  - cat /ssh/admin_key_stockholm-vm
+  - cat .ssh/admin_key_stockholm-vm
   - pwd
-  - rm -f ~/.ssh/known_hosts
   script: ssh -T ec2-user@13.48.123.71 -i .ssh/admin_key_stockholm-vm
 
     
