@@ -21,7 +21,7 @@ delpoy:
   - chmod 600 ~/.ssh/ssh_key
   - ls -la
   script:
-  - scp -i ~/.ssh/ssh_key compiled.txt ec2-user@13.48.123.71:/files/
+  - scp -i ~/.ssh/ssh_key compiled.txt ec2-user@13.48.123.71:/home/ec2-user/files/
   - ssh -T ec2-user@13.48.123.71 -i ~/.ssh/ssh_key "mkdir gitlab"
 
 
