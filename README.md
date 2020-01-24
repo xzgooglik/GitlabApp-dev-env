@@ -1,1 +1,1 @@
-- test for gitlab CI
+- test for gitlab CI v2
