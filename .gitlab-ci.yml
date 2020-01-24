@@ -1,8 +1,6 @@
 image: alpine
 stages:
   - compile
-  - test
-  - package
   - delpoy
 
 compile:
@@ -11,30 +9,6 @@ compile:
   artifacts:
     paths:
     - compiled.txt
-    expire_in: 20 minutes
-    
-test:
-  stage: test
-  script: egrep -w 'Hello|world' file1.txt file2.txt
-
-package:
-  stage: package
-  script: cat compiled.txt | gzip > package.gz
-  artifacts:
-    paths:
-    - package.gz
-
-pack-iso:
-  stage: package
-  before_script:
-  - echo "ipv6" >> /etc/modules
-  - apk update
-  - apk add xorriso
-  script:
-  - mkisofs -o ./package.iso ./compiled.txt
-  artifacts:
-    paths:
-    - package.iso
     
 delpoy:
   stage: delpoy
@@ -47,6 +21,7 @@ delpoy:
   - ls -la
   - cat ~/.ssh/admin_key_stockholm-vm
   - pwd
+  - rm -f ~/.ssh/known_hosts
   script: ssh -T ec2-user@13.48.123.71 -i ~/.ssh/admin_key_stockholm-vm
 
     
