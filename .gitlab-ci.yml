@@ -20,6 +20,6 @@ delpoy:
   - chmod 700 .ssh/admin_key_stockholm-vm
   - ssh-keyscan -t rsa 13.48.123.71 >> .ssh/known_hosts
   - ls -la
-  script: ssh -T ec2-user@13.48.123.71 -i .ssh/admin_key_stockholm-vm
+  script: ssh -T ec2-user@13.48.123.71
 
     
